@@ -23,7 +23,7 @@ const formSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   website: z.string().url().optional(),
   features: z.string().min(3, "Please enter at least one feature"),
-  image: z.string().url("Please enter a valid image URL").optional(),
+  image: z.string().url().optional(),
 })
 
 export default function AddListingPage() {
@@ -215,7 +215,7 @@ export default function AddListingPage() {
                 </FormItem>
               )}
             />
-
+            
             <FormField
               control={form.control}
               name="image"
@@ -223,13 +223,9 @@ export default function AddListingPage() {
                 <FormItem>
                   <FormLabel>Business Image</FormLabel>
                   <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="Enter image URL"
-                      onChange={(e) => field.onChange(e.target.value)}
-                    />
+                  <Input {...field} type="url" placeholder="Enter Image URL (optional)" />
                   </FormControl>
-                  <FormDescription>Example: https://www.example.com/dummy-image/600x400/000/FFF</FormDescription>
+                  <FormDescription>Example: https://www.example.com/dummy-image/600x400/</FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
