@@ -223,7 +223,7 @@ export default function AddListingPage() {
                 <FormItem>
                   <FormLabel>Business Image</FormLabel>
                   <FormControl>
-                  <Input {...field} type="url" placeholder="Enter Image URL (optional)" />
+                  <Input {...field} placeholder="Enter image URL" />
                   </FormControl>
                   <FormDescription>Example: https://www.example.com/dummy-image/600x400/</FormDescription>
                   <FormMessage />
