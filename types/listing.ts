@@ -7,7 +7,6 @@ export interface Listing {
   phone: string
   email: string
   website: string
-  image: string
   hours: {
     [key: string]: string
   }

@@ -23,7 +23,7 @@ export async function submitListing(formData: FormData): Promise<{ success: bool
         saturday: "Closed",
         sunday: "Closed",
       },
-      images: [(formData.get("url") as string) || "",],
+      images: [(formData.get("images") as string) || "",],
       features: (formData.get("features") as string).split(",").map((f) => f.trim()),
       status: "pending",
     }
